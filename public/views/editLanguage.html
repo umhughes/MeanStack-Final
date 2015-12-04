@@ -1,0 +1,45 @@
+            <section ng-controller="LanguagesController" ng-init="findOne()">
+              <md-card>
+                <form ng-submit="update()" novalidate>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <h2 class="md-toolbar-tools">
+                  <span>Edit Product</span>
+                </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  <md-input-container>
+                    <label>Product Name</label>
+                    <input ng-model="language.productName" type="productName">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Category</label>
+                    <md-select ng-model="language.Category" type="Category">
+                      <md-option value="Electronics">Electronics</md-option>
+                      <md-option value="HouseHold">HouseHold</md-option>
+                      <md-option value="Lawn & Garden">Lawn & Garden</md-option>
+                    </md-select>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Description</label>
+                    <input ng-model="language.Desc">
+                  </md-input-container>
+                </md-content>
+            <div layout="row">
+              
+               <md-button class="md-raised md-primary" type="submit" value="Update">
+                  Submit
+                </md-button>              
+              
+            </div>
+
+                <div ng-show="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </form>
+              </md-card>
+          </section>

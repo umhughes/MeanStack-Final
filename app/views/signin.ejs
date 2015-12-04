@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Language_App">
+  <head>
+    <link rel="stylesheet" href="/public/css/css.css"/>
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body ng-controller="AppCtrl"  layout="column">
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <h1>Product App</h1>
+      </div>
+    </md-toolbar>
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex class="md-padding md-whiteframe-2dp">
+
+            <form action="/signin" method="post">
+                <md-card layout="column">
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                  <h2 class="md-toolbar-tools">
+                    <span>Sign in</span>
+                  </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                    <% for(var i in messages) {%>
+                        <div class="flash">
+                            <%= messages[i]%>
+                        </div>
+                    <% } %>
+                    
+                <div layout="row">
+                  
+                  <md-input-container>
+                    <label>Username</label>
+                    <input type="text" name="username">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Password</label>
+                    <input type="password" name="password">
+                  </md-input-container>                  
+                  
+                </div>    
+
+                  </md-content>
+                  <div layout="row">
+                   <md-button class="md-raised md-primary" type="submit" value="Sign In">
+                      Sign In
+                    </md-button>
+
+                    <md-button class="md-raised md-primary" type="submit" href="/signup">
+                      Sign Up
+                    </md-button>
+                  </div>
+                  <div ng-bind="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </md-card>
+            </form>
+              
+              
+            </md-content>
+        </div>
+    <!-- Angular Material Dependencies -->
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
+    
+    <script src="/public/module.js"></script>
+    
+    <script src="/public/controllers/languages.public.controller.js"></script>
+    
+    <script src="/public/services/languages.public.service.js"></script>
+    
+    <script src="/public/routes/routing.public.route.js"></script>
+    
+    <script src="/public/js/js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Language_App">
+  <head>
+    <link rel="stylesheet" href="/public/css/css.css"/>
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body ng-controller="AppCtrl"  layout="column">
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <h1 flex="30">Product App</h1>
+       <div flex="45">
+          <md-button class="md-accent md-whiteframe-0dp" href="/#!/">
+            View all Products
+          </md-button>
+          <md-button class="md-accent md-whiteframe-0dp" href="/#!/languages/create">
+            Add Product
+          </md-button> 
+          <md-button href="/signout" class="md-accent">Sign Out</md-button>
+       </div> 
+        <div flex="25">
+          <label>Hello <%=userFullName%></label>
+        </div>
+      </div>
+    </md-toolbar>
+    <div layout="row" flex>
+
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex class="md-padding md-whiteframe-2dp">
+
+              <section ng-view></section>
+              
+            </md-content>
+        </div>
+    </div>
+    <!-- Angular Material Dependencies -->
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
+    
+    <script src="/public/module.js"></script>
+    
+    <script src="/public/controllers/languages.public.controller.js"></script>
+    
+    <script src="/public/services/languages.public.service.js"></script>
+    
+    <script src="/public/routes/routing.public.route.js"></script>
+    
+    <script src="/public/js/js.js"></script>
+  </body>
+</html>

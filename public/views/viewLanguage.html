@@ -1,0 +1,40 @@
+            <section ng-controller="LanguagesController" data-ng-init="findOne()">
+              <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <h2 class="md-toolbar-tools">
+                  <span ng-bind="language.productName"></span>
+                </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+
+                  <md-input-container>
+                    <label>Product Name</label>
+                    <label ng-bind="language.productName">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Category</label>
+                    <Label ng-bind="language.Category" type="Category">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Description</label>
+                    <label ng-bind="language.Desc" type="Desc">
+                  </md-input-container>
+                  <br>
+                </md-content>
+                <div layout="row">
+                  
+                <md-button class="md-raised md-primary" layout="row">
+                  <a href="/#!/languages/{{language._id}}/edit">Edit</a>
+                </md-button>
+                <md-button class="md-raised md-primary" layout="row">
+                  <a href="#" ng-click="delete();">Delete</a>
+                </md-button>
+                  
+                </div>
+
+                </md-card-content>
+              </md-card>
+          </section>

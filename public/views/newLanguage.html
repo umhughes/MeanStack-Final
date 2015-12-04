@@ -1,0 +1,54 @@
+            <section ng-app="Language_App" ng-controller="LanguagesController">
+              <form ng-submit="create()" novalidate>
+                <input ng-model="productName" type="hidden"/>
+                <input ng-model="Category" type="hidden"/>
+                <input ng-model="Desc" type="hidden"/>
+                <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                  <h2 class="md-toolbar-tools">
+                    <span>Create Product</span>
+                  </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                    
+                <div layout="row">
+                  
+                  <md-input-container>
+                    <label>Product Name</label>
+                    <input ng-model="productName" id="productName" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Category</label>
+                    <md-select ng-model="Category" id="Category" required>
+                      <md-option value="Electronics">Electronics</md-option>
+                      <md-option value="HouseHold">HouseHold</md-option>
+                      <md-option value="Lawn & Garden">Lawn & Garden</md-option>
+                    </md-select>
+                  </md-input-container>                  
+                  
+                </div>
+
+                  <md-input-container>
+                    <label>Description</label>
+                    <input ng-model="Desc" id="Desc" required>
+                  </md-input-container>
+                    
+                  </md-content>
+                  <div layout="row">
+                    
+                  <md-button class="md-raised md-primary" type="submit">
+                    Submit
+                  </md-button>
+                    
+                  </div>
+
+                  <div ng-bind="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </md-card>
+              </form>
+          </section>
