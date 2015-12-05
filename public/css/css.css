@@ -1,0 +1,10 @@
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+#footer{
+  color: yellow;
+  text-decoration: none;
+}

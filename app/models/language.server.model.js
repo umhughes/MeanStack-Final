@@ -1,20 +1,24 @@
 var mongoose = require("mongoose"), Schema = mongoose.Schema;
 
 var LanguageSchema =  new Schema({
-    productName: {
+    bookName: {
         type: String,
-        required: 'Product Name can not be blank'
+        required: 'Book Name can not be blank'
     },
 
-    Category: {
+    Language: {
         type: String,
-        required: 'Category can not be blank'
+        required: 'Language can not be blank'
     },
 
     Desc: {
         type: String,
         required: 'Description can not be blank'
     },
+    
+    Img: {
+        type: String
+    }
 
 });
 

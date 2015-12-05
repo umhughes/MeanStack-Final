@@ -1,12 +1,12 @@
             <section ng-app="Language_App" ng-controller="LanguagesController">
               <form ng-submit="create()" novalidate>
-                <input ng-model="productName" type="hidden"/>
-                <input ng-model="Category" type="hidden"/>
+                <input ng-model="bookName" type="hidden"/>
+                <input ng-model="Language" type="hidden"/>
                 <input ng-model="Desc" type="hidden"/>
                 <md-card>
                 <md-toolbar class="md-accent md-whiteframe-1dp">
                   <h2 class="md-toolbar-tools">
-                    <span>Create Product</span>
+                    <span>Create Book</span>
                   </h2>
                 </md-toolbar>
                 <md-card-content layout="column">
@@ -15,16 +15,16 @@
                 <div layout="row">
                   
                   <md-input-container>
-                    <label>Product Name</label>
-                    <input ng-model="productName" id="productName" required>
+                    <label>Book Name</label>
+                    <input ng-model="bookName" id="bookName" required>
                   </md-input-container>
                   
                   <md-input-container>
-                    <label>Category</label>
-                    <md-select ng-model="Category" id="Category" required>
-                      <md-option value="Electronics">Electronics</md-option>
-                      <md-option value="HouseHold">HouseHold</md-option>
-                      <md-option value="Lawn & Garden">Lawn & Garden</md-option>
+                    <label>Language</label>
+                    <md-select ng-model="Language" id="Language" required>
+                      <md-option value="CSharp">CSharp</md-option>
+                      <md-option value="Node">Node</md-option>
+                      <md-option value="Angular">Angular</md-option>
                     </md-select>
                   </md-input-container>                  
                   
@@ -37,6 +37,11 @@
                     
                   </md-content>
                   <div layout="row">
+                    
+                    <md-input-container>
+                    <label>Image URL</label>
+                    <input ng-model="Img" id="Img">
+                  </md-input-container>                  
                     
                   <md-button class="md-raised md-primary" type="submit">
                     Submit

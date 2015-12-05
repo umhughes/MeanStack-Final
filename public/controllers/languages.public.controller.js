@@ -7,6 +7,7 @@ angular.module('languages').controller('LanguagesController', ['$scope', '$route
             productName: this.productName,
             Category: this.Category,
             Desc: this.Desc,
+            Img: this.Img
 
       });
       language.$save(function(response) {

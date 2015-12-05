@@ -28,6 +28,21 @@ exports.create = function(req, res)
 };
 
 exports.list = function(req, res) {
+    Language.find().sort('-Class')
+    .populate('bookName', 'bookName')
+     .exec(function(err, languages){
+         console.log(err);
+        if (err){
+            return res.status(400).send({
+                message: getErrorMessage(err)
+            });
+        } else {
+            res.json(languages);
+        }
+    });
+};
+
+exports.list = function(req, res) {
     Language.find().sort('-Category')
      .exec(function(err, languages){
          console.log(err);
@@ -62,6 +77,7 @@ exports.update = function(req, res)
     language.productName = req.body.productName;
     language.Category = req.body.Category;
     language.Desc = req.body.Desc;
+    language.img = req.body.Img;
     
     language.save(function(err)
     {
